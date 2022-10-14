@@ -2,6 +2,6 @@
 ***
 [Лабораторная работа №1][1]
 
-[1]: https://github.com/labSecuWeb/labSecuWeb/tree/main/lab1 "Лабораторная работа №1"
+[1]: https://labsecuweb.github.io/labSecuWeb/lab1/public/content/index.html "Лабораторная работа №1"
 
 [^1]: Выполнили Бородашкина Екатерина и Крупин Константин, студенты группы РИ-581220
