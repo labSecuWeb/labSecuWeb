@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>{{ page.title }}</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="../styles/grid-style.css">
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    </head>
+    <body>
+    <header>{{ page.title }}</header>
+    <nav>
+        <a href="{{ get_url(path='@/index.md') }}" title="Про тайгу">Главная</a>
+        <a href="{{ get_url(path='@/specif.md') }}" title="Тигр - хамелеон?!">Характеристики</a>
+        <a href="{{ get_url(path='@/habitat.md') }}" title="Дальние тигры">Местообитание</a>
+        <a href="{{ get_url(path='@/fact.md') }}" title="Я умею летать!!!">Интересные факты</a>
+    </nav>
+    <article>{{ page.content | safe}}</article>
+    </body>
+</html>
